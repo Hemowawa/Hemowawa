@@ -1,0 +1,642 @@
+/* =========================================================
+   HemoWawa - Guía de Estilos 4.1 (Regla 60-30-10 y WCAG 2.1)
+   60% Lienzo: #FFFFFF / #F8FAFC
+   30% Estructura: #E0F2FE / #E2E8F0
+   10% Acción: #075985
+   Alerta Crítica: #B91C1C
+   ========================================================= */
+
+:root {
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-structure: #E0F2FE;
+  --border-light: #E2E8F0;
+  --border-input: #78889E;
+  --primary: #075985;
+  --primary-hover: #0369A1;
+  --secondary-border: #0284C7;
+  --text-main: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --danger: #B91C1C;
+  --danger-bg: #FEF2F2;
+  --success: #15803D;
+  --success-bg: #F0FDF4;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Accesibilidad: Skip link y foco visible */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  background: var(--primary);
+  color: #FFFFFF;
+  padding: 10px 16px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--secondary-border);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.narrow-container {
+  max-width: 600px;
+}
+
+/* Header & Navegación */
+.header {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.nav-menu a.btn-primary {
+  color: #FFFFFF;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-input);
+  border-radius: 6px;
+  font-size: 20px;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+/* Botones (Mínimo 44px de alto según WCAG / Sección 4.1.5) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+.btn-sm {
+  min-height: 44px;
+  padding: 8px 14px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--bg-structure);
+  color: var(--primary);
+  border-color: var(--secondary-border);
+}
+
+.btn-outline {
+  background-color: var(--bg-surface);
+  color: var(--primary);
+  border-color: var(--secondary-border);
+}
+
+/* Hero Section */
+.hero {
+  padding: 56px 0;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--bg-structure);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.hero-card h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.status-pill {
+  margin: 16px 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.status-pending {
+  background: var(--bg-structure);
+  color: var(--primary);
+}
+.status-done {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+/* Secciones generales */
+.section {
+  padding: 56px 0;
+}
+.section-alt {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 36px auto;
+}
+.section-header h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.section-header p {
+  color: var(--text-secondary);
+}
+
+/* Estadísticas */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.stat-number {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.stat-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* Tabs de roles */
+.role-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-input);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+}
+
+/* Grid del Dashboard */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.card-wide {
+  grid-column: 1 / -1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 10px;
+}
+
+.card-header h3 {
+  font-size: 17px;
+}
+
+.hu-tag {
+  background: var(--bg-structure);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 12px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+.form-control {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-input);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sub-form {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-light);
+}
+
+.form-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-box {
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.alert {
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.alert-danger {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+/* Control diario y calendario */
+.reminder-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.time-input {
+  width: auto;
+}
+.dose-action-box {
+  margin-top: 14px;
+  padding: 14px;
+  background: var(--bg-canvas);
+  border-radius: 8px;
+}
+.dose-action-box p {
+  margin-bottom: 10px;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.kpi {
+  background: var(--bg-structure);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+.kpi-val {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+.kpi-lbl {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.calendar-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+.day {
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+}
+.day.done {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+.day.missed {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+.day.pending {
+  background: var(--bg-canvas);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+}
+
+/* Recetario */
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.recipe-card {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--bg-canvas);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recipe-card h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+.recipe-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+/* Código invitación y Tabla clínica */
+.code-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-structure);
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 8px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+.clinical-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.clinical-table th, .clinical-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+.badge-risk {
+  background: var(--danger-bg);
+  color: var(--danger);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+}
+.badge-ok {
+  background: var(--success-bg);
+  color: var(--success);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.toast {
+  background: var(--primary);
+  color: #FFFFFF;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.accordion summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 8px 0;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-light);
+  padding: 28px 0;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   ADAPTACIÓN RESPONSIVE (Subcapítulo 5.2: Tablet y Mobile)
+   ========================================================= */
+@media (max-width: 960px) {
+  .hero-grid, .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid, .recipes-grid, .filter-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-light);
+    padding: 16px 20px;
+  }
+  .nav-menu.open {
+    display: block;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .stats-grid, .recipes-grid, .filter-bar, .form-row {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 26px;
+  }
+}

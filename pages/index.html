@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HemoWawa | Adherencia al hierro y prevención de anemia infantil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- HEADER & NAVEGACIÓN -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#inicio" class="logo" aria-label="HemoWawa Inicio">
+        <span class="logo-icon" aria-hidden="true">💧</span>
+        <span class="logo-text">HemoWawa</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú de navegación">
+        ☰
+      </button>
+      <nav id="navMenu" class="nav-menu" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#problematica">Problemática</a></li>
+          <li><a href="#demo-interactiva">Probar App (30 HU)</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#registro-rapido" class="btn btn-primary btn-sm">Comenzar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge">Salud Digital Infantil • Perú</span>
+          <h1>Que ninguna dosis de hierro se olvide ni se abandone por miedo</h1>
+          <p class="hero-subtitle">
+            Herramienta móvil y clínica para madres, padres, cuidadores secundarios y personal de salud del primer nivel. 
+            Asegura el tratamiento de niños de <strong>6 a 35 meses</strong> con recordatorios, registro en un toque y recetario económico.
+          </p>
+          <div class="hero-actions">
+            <a href="#demo-interactiva" class="btn btn-primary">Probar Demo Interactivo</a>
+            <a href="#problematica" class="btn btn-secondary">Conocer el impacto</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Resumen rápido de impacto">
+          <h2>Estado del tratamiento hoy</h2>
+          <p class="meta">Ejemplo en tiempo real • Niño: Mateo (14 meses)</p>
+          <div class="status-pill status-pending" id="heroDoseBadge">Dosis diaria: Pendiente (08:00 a. m.)</div>
+          <p class="card-desc">Conecta el hogar con el centro de salud CRED sin mensajes perdidos en WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMÁTICA (Capítulo I) -->
+    <section id="problematica" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>¿Por qué persiste la anemia infantil en el Perú?</h2>
+          <p>El Estado entrega suplementos gratuitos, pero el verdadero reto está en la continuidad diaria en el hogar.</p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-number">34,9%</span>
+            <h3>Anemia en niños de 6 a 35 meses</h3>
+            <p class="meta">ENDES 2025 (31,5% en zonas urbanas de Lima Metropolitana).</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">38,7%</span>
+            <h3>Consumo semanal de hierro</h3>
+            <p class="meta">Más de la mitad interrumpe las gotas o micronutrientes por efectos leves.</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">24,4%</span>
+            <h3>Adherencia constante</h3>
+            <p class="meta">El olvido, el rechazo al sabor y los relevos sin guía rompen el esquema.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO INTERACTIVA (30 HISTORIAS DE USUARIO CORE) -->
+    <section id="demo-interactiva" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Experiencia Funcional HemoWawa</h2>
+          <p>Selecciona un rol para interactuar con las 30 funcionalidades principales diseñadas para cada segmento objetivo.</p>
+        </div>
+
+        <!-- TABS DE ROLES -->
+        <div class="role-tabs" role="tablist" aria-label="Seleccionar rol de usuario">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-padres" id="tab-padres" data-role="padres">
+            1. Padres de Familia
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-cuidadores" id="tab-cuidadores" data-role="cuidadores">
+            2. Cuidadores Secundarios
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-salud" id="tab-salud" data-role="salud">
+            3. Personal de Salud
+          </button>
+        </div>
+
+        <!-- TOAST GLOBAL DE FEEDBACK -->
+        <div id="toastMessage" class="toast" role="status" aria-live="polite" hidden></div>
+
+        <!-- ==================== PANEL 1: PADRES DE FAMILIA ==================== -->
+        <div id="panel-padres" class="role-panel active" role="tabpanel" aria-labelledby="tab-padres">
+          <div class="dashboard-grid">
+            
+            <!-- HU-002 & HU-003: Perfil del niño y selector -->
+            <article class="card">
+              <div class="card-header">
+                <h3>Perfil del Niño y Selector</h3>
+                <span class="hu-tag">HU-002 • HU-003</span>
+              </div>
+              <label for="childSelector">Niño activo:</label>
+              <select id="childSelector" class="form-control">
+                <option value="Mateo|14|Sulfato Ferroso|15 gotas|3 meses">Mateo (14 meses)</option>
+                <option value="Valeria|8|Micronutrientes|1 sobre|6 meses">Valeria (8 meses)</option>
+              </select>
+
+              <form id="addChildForm" class="sub-form" novalidate>
+                <p class="form-title">Registrar nuevo niño (6 a 35 meses)</p>
+                <div class="form-group">
+                  <label for="childName">Nombre del niño *</label>
+                  <input type="text" id="childName" class="form-control" placeholder="Ej. Lucas" required>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="childBirth">Fecha de nacimiento *</label>
+                    <input type="date" id="childBirth" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="childWeight">Peso (kg) *</label>
+                    <input type="number" id="childWeight" step="0.1" class="form-control" placeholder="Ej. 9.5" required>
+                  </div>
+                </div>
+                <div id="ageWarning" class="alert alert-danger" role="alert" hidden>
+                  Advertencia: La edad calculada está fuera del rango de 6 a 35 meses diseñado para HemoWawa.
+                </div>
+                <button type="submit" class="btn btn-secondary btn-block">Guardar perfil</button>
+              </form>
+            </article>
+
+            <!-- HU-004, HU-005, HU-006: Indicación médica vigente -->
+            <article class="card">
+              <div class="card-header">
+                <h3>Indicación de Hierro Vigente</h3>
+                <span class="hu-tag">HU-004 • HU-005 • HU-006</span>
+              </div>
+              <div class="info-box" id="indicationBox">
+                <p><strong>Suplemento:</strong> <span id="indSup">Sulfato Ferroso</span></p>
+                <p><strong>Dosis:</strong> <span id="indDose">15 gotas diarias</span></p>
+                <p><strong>Duración:</strong> <span id="indDur">3 meses</span></p>
+                <p class="meta">Última actualización: <span id="indUpdated">Hoy</span></p>
+              </div>
+              <form id="indicationForm" class="sub-form" novalidate>
+                <div class="form-group">
+                  <label for="newSup">Suplemento *</label>
+                  <select id="newSup" class="form-control">
+                    <option value="Sulfato Ferroso">Sulfato Ferroso (Gotas)</option>
+                    <option value="Hierro Polimaltosado">Hierro Polimaltosado</option>
+                    <option value="Micronutrientes (Chispitas)">Micronutrientes (Sobres)</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="newDose">Dosis *</label>
+                    <input type="text" id="newDose" class="form-control" placeholder="Ej. 15 gotas" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="newDur">Duración *</label>
+                    <input type="text" id="newDur" class="form-control" placeholder="Ej. 3 meses" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-block">Actualizar indicación</button>
+              </form>
+            </article>
+
+            <!-- HU-008, HU-009, HU-010, HU-011, HU-012: Recordatorios y Registro de Dosis -->
+            <article class="card">
+              <div class="card-header">
+                <h3>Control Diario de Dosis</h3>
+                <span class="hu-tag">HU-008 a HU-012</span>
+              </div>
+              <div class="reminder-bar">
+                <label for="reminderTime">Recordatorio diario:</label>
+                <input type="time" id="reminderTime" value="08:00" class="form-control time-input">
+                <button type="button" id="snoozeBtn" class="btn btn-outline btn-sm">Posponer 30m</button>
+              </div>
+              <p class="meta" id="reminderStatus">Aviso activo a las 08:00 a. m.</p>
+
+              <div class="dose-action-box">
+                <p><strong>Estado de hoy:</strong> <span id="todayDoseState">Pendiente</span></p>
+                <button type="button" id="registerDoseBtn" class="btn btn-primary btn-block">
+                  ✓ Registrar dosis con un toque
+                </button>
+                <button type="button" id="missedDoseToggle" class="btn btn-outline btn-block mt-1">
+                  No se administró hoy
+                </button>
+              </div>
+
+              <!-- Motivo de dosis no administrada (HU-012 & HU-015) -->
+              <div id="missedDoseForm" class="sub-form" hidden>
+                <label for="missedReason">Motivo de omisión *</label>
+                <select id="missedReason" class="form-control">
+                  <option value="">Selecciona un motivo...</option>
+                  <option value="Olvido">Olvido</option>
+                  <option value="Rechazo del niño">Rechazo del niño</option>
+                  <option value="Molestia estomacal">Molestia estomacal</option>
+                </select>
+                <button type="button" id="saveMissedBtn" class="btn btn-secondary btn-block mt-1">Guardar motivo</button>
+                <div id="forgottenGuide" class="info-box mt-1" hidden>
+                  <strong>¿Qué hago ahora? (HU-015):</strong> Continúa mañana con la dosis normal. Nunca dupliques la dosis del día anterior.
+                </div>
+              </div>
+            </article>
+
+            <!-- HU-013, HU-014, HU-016: Historial, Calendario y Resumen CRED -->
+            <article class="card">
+              <div class="card-header">
+                <h3>Mi Avance y Resumen CRED</h3>
+                <span class="hu-tag">HU-013 • HU-014 • HU-016</span>
+              </div>
+              <div class="kpi-row">
+                <div class="kpi">
+                  <span class="kpi-val" id="daysCompleted">18</span>
+                  <span class="kpi-lbl">Días cumplidos / 20</span>
+                </div>
+                <div class="kpi">
+                  <span class="kpi-val" id="adherencePct">90%</span>
+                  <span class="kpi-lbl">Cumplimiento</span>
+                </div>
+              </div>
+              <div class="calendar-strip" aria-label="Calendario semanal de cumplimiento">
+                <span class="day done" title="Lunes: Cumplido">L ✓</span>
+                <span class="day done" title="Martes: Cumplido">M ✓</span>
+                <span class="day done" title="Miércoles: Cumplido">M ✓</span>
+                <span class="day missed" title="Jueves: Olvido">J ✕</span>
+                <span class="day done" title="Viernes: Cumplido">V ✓</span>
+                <span class="day pending" id="calToday" title="Hoy: Pendiente">S •</span>
+                <span class="day pending" title="Domingo: Pendiente">D •</span>
+              </div>
+              <button type="button" id="credSummaryBtn" class="btn btn-secondary btn-block mt-1">
+                Ver Resumen para Control CRED
+              </button>
+              <div id="credModal" class="info-box mt-1" hidden>
+                <strong>Resumen Clínico (Últimos 30 días):</strong><br>
+                • Dosis administradas: <span id="credDays">18</span> días<br>
+                • Omisiones registradas: 2 (Olvido)<br>
+                • Molestias reportadas: Estreñimiento leve (1 vez)
+              </div>
+            </article>
+
+            <!-- HU-018, HU-019, HU-020, HU-021: Reporte de Molestias y Signos de Alarma -->
+            <article class="card">
+              <div class="card-header">
+                <h3>Molestias y Guía Clínica</h3>
+                <span class="hu-tag">HU-018 a HU-021</span>
+              </div>
+              <form id="symptomForm" novalidate>
+                <label for="symptomSelect">¿Qué molestia o situación observaste? *</label>
+                <select id="symptomSelect" class="form-control">
+                  <option value="">Selecciona una opción...</option>
+                  <option value="estreñimiento">Estreñimiento leve o heces oscuras</option>
+                  <option value="rechazo">Rechazo al sabor metálico</option>
+                  <option value="alarma">Signo de alarma (Vómitos persistentes / decaimiento severo)</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-block mt-1">Reportar y ver orientación</button>
+              </form>
+
+              <div id="symptomFeedback" class="mt-1" hidden></div>
+
+              <details class="accordion mt-1">
+                <summary>Técnicas para mezclar el suplemento (HU-021)</summary>
+                <p>Mezcla las gotas o micronutrientes con 2 cucharadas de papilla tibia (zapallo, hígado o sangrecita) y cítricos (jugo de naranja o limonada) para mejorar la absorción. Evita mezclarlo con leche.</p>
+              </details>
+            </article>
+
+            <!-- HU-024, HU-025, HU-026, HU-027, HU-029: Recetario Rico en Hierro -->
+            <article class="card card-wide">
+              <div class="card-header">
+                <h3>Recetario Económico Rico en Hierro</h3>
+                <span class="hu-tag">HU-024 a HU-027 • HU-029</span>
+              </div>
+              <div class="filter-bar">
+                <div class="form-group">
+                  <label for="filterAge">Edad del niño:</label>
+                  <select id="filterAge" class="form-control">
+                    <option value="all">Todas las edades (6-35m)</option>
+                    <option value="6-8">6 a 8 meses (Papillas)</option>
+                    <option value="9-11">9 a 11 meses (Picados)</option>
+                    <option value="12-35">12 a 35 meses (Olla familiar)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="filterIng">Ingrediente disponible:</label>
+                  <select id="filterIng" class="form-control">
+                    <option value="all">Todos los ingredientes</option>
+                    <option value="sangrecita">Sangrecita</option>
+                    <option value="higado">Hígado de pollo</option>
+                    <option value="lentejas">Lentejas</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="filterFav">Vista:</label>
+                  <select id="filterFav" class="form-control">
+                    <option value="all">Todas las recetas</option>
+                    <option value="fav">Solo guardadas (★)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="recipesGrid" class="recipes-grid"></div>
+              <p id="noRecipesMsg" class="meta" hidden>No hay recetas con esa combinación. Prueba quitando algún filtro.</p>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ==================== PANEL 2: CUIDADORES SECUNDARIOS ==================== -->
+        <div id="panel-cuidadores" class="role-panel" role="tabpanel" aria-labelledby="tab-cuidadores" hidden>
+          <div class="dashboard-grid">
+            
+            <!-- HU-031: Invitación y código compartido -->
+            <article class="card">
+              <div class="card-header">
+                <h3>Acceso Compartido Familiar</h3>
+                <span class="hu-tag">HU-031 • HU-035</span>
+              </div>
+              <p>Código de vinculación generado por los padres para abuelos, tíos o niñeros:</p>
+              <div class="code-box">
+                <span id="inviteCode">HEMO-2026-MATEO</span>
+                <button type="button" id="copyCodeBtn" class="btn btn-secondary btn-sm">Copiar código</button>
+              </div>
+              <div class="info-box mt-1">
+                <strong>Verificación en tiempo real (HU-035):</strong><br>
+                Estado de la dosis de hoy: <span id="caregiverSyncStatus">Pendiente de administración</span>
+              </div>
+            </article>
+
+            <!-- HU-034 & HU-037: Registro por cuidador y reporte de incidencias -->
+            <article class="card">
+              <div class="card-header">
+                <h3>Turno del Cuidador Secundario</h3>
+                <span class="hu-tag">HU-034 • HU-037</span>
+              </div>
+              <form id="caregiverDoseForm" novalidate>
+                <div class="form-group">
+                  <label for="caregiverName">Nombre del cuidador *</label>
+                  <input type="text" id="caregiverName" class="form-control" value="Carlomagno (Tío)" required>
+                </div>
+                <div class="form-group">
+                  <label for="doseAmount">¿Cómo tomó el suplemento? *</label>
+                  <select id="doseAmount" class="form-control">
+                    <option value="Completa">Dosis completa</option>
+                    <option value="Parcial">Dosis parcial (derrame o rechazo)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="caregiverObs">Observación o incidencia</label>
+                  <input type="text" id="caregiverObs" class="form-control" placeholder="Ej. Se mezcló con papilla de zapallo">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Registrar y notificar a padres</button>
+              </form>
+              <div id="caregiverLog" class="info-box mt-1">
+                <strong>Última actividad:</strong> Sin registros en este turno.
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ==================== PANEL 3: PERSONAL DE SALUD ==================== -->
+        <div id="panel-salud" class="role-panel" role="tabpanel" aria-labelledby="tab-salud" hidden>
+          <div class="dashboard-grid">
+            
+            <!-- HU-040 & HU-041: Vinculación de pacientes -->
+            <article class="card">
+              <div class="card-header">
+                <h3>Vinculación Autorizada de Paciente</h3>
+                <span class="hu-tag">HU-040 • HU-041</span>
+              </div>
+              <p class="meta">Establecimiento: C.S. Materno Infantil Lima Sur</p>
+              <form id="linkPatientForm" class="sub-form" novalidate>
+                <label for="patientCodeInput">Código compartido por la familia *</label>
+                <div class="form-row">
+                  <input type="text" id="patientCodeInput" class="form-control" placeholder="Ej. HEMO-9981" required>
+                  <button type="submit" class="btn btn-primary">Vincular</button>
+                </div>
+              </form>
+            </article>
+
+            <!-- HU-042, HU-043, HU-044: Panel de Adherencia y Alertas -->
+            <article class="card card-wide">
+              <div class="card-header">
+                <h3>Panel Clínico de Adherencia</h3>
+                <span class="hu-tag">HU-042 • HU-043 • HU-044</span>
+              </div>
+              <div class="filter-bar">
+                <div class="form-group">
+                  <label for="searchPatient">Buscar paciente:</label>
+                  <input type="text" id="searchPatient" class="form-control" placeholder="Nombre del niño...">
+                </div>
+                <div class="form-group">
+                  <label for="filterRisk">Filtrar por estado:</label>
+                  <select id="filterRisk" class="form-control">
+                    <option value="all">Todos los pacientes</option>
+                    <option value="riesgo">En riesgo / Abandono (&lt;75%)</option>
+                    <option value="optimo">Adherencia óptima (&ge;75%)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="clinical-table">
+                  <thead>
+                    <tr>
+                      <th>Paciente</th>
+                      <th>Edad</th>
+                      <th>Adherencia (30d)</th>
+                      <th>Último registro</th>
+                      <th>Estado</th>
+                      <th>Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody id="patientsTableBody"></tbody>
+                </table>
+              </div>
+              <div id="patientDetailBox" class="info-box mt-1" hidden></div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BENEFICIOS POR SEGMENTO -->
+    <section id="beneficios" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Diseñado para todo el círculo de cuidado</h2>
+          <p>Cerramos la brecha entre la consulta CRED y la rutina diaria del hogar.</p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <h3>Cuidadores Principales</h3>
+            <p>Recordatorios configurables, registro en un toque y recetas económicas con ingredientes locales.</p>
+          </article>
+          <article class="stat-card">
+            <h3>Cuidadores Secundarios</h3>
+            <p>Acceso compartido de solo lectura a dosis y horarios para evitar olvidos o duplicidad de tomas.</p>
+          </article>
+          <article class="stat-card">
+            <h3>Personal de Salud</h3>
+            <p>Alertas tempranas por días sin registro para intervenir antes del siguiente control mensual.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRO DE CUENTA (HU-001) -->
+    <section id="registro-rapido" class="section">
+      <div class="container narrow-container">
+        <div class="card">
+          <div class="card-header">
+            <h2>Crea tu cuenta en HemoWawa</h2>
+            <span class="hu-tag">HU-001</span>
+          </div>
+          <p>Regístrate como madre, padre o cuidador para guardar el esquema de hierro de tu hijo.</p>
+          <form id="registerAccountForm" novalidate>
+            <div class="form-group">
+              <label for="regName">Nombre completo *</label>
+              <input type="text" id="regName" class="form-control" placeholder="Ej. Diana Vargas" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regEmail">Correo electrónico *</label>
+                <input type="email" id="regEmail" class="form-control" placeholder="nombre@correo.com" required>
+              </div>
+              <div class="form-group">
+                <label for="regPhone">Celular *</label>
+                <input type="tel" id="regPhone" class="form-control" placeholder="999 888 777" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="regPass">Contraseña (mínimo 8 caracteres) *</label>
+              <input type="password" id="regPass" class="form-control" placeholder="••••••••" required>
+            </div>
+            <div id="regError" class="alert alert-danger" role="alert" hidden></div>
+            <button type="submit" class="btn btn-primary btn-block">Crear cuenta gratuita</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL (Arquitectura 4.2.1) -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>HemoWawa</strong>
+        <p class="meta">Startup peruana de salud digital enfocada en la prevención de anemia infantil (6 a 35 meses).</p>
+      </div>
+      <div>
+        <p class="meta"><strong>Proyecto Académico UPC</strong><br>Curso: 1ASI0784 - HCI for UX Design • Ciclo 2026-20</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
