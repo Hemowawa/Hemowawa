@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HemoWawa | Que ninguna dosis de hierro se olvide</title>
+  <meta name="description" content="HemoWawa ayuda a madres, padres, cuidadores y personal de salud a cumplir el esquema de hierro de niños de 6 a 35 meses.">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="HemoWawa, ir al inicio">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z" fill="#E0F2FE" stroke="#075985" stroke-width="2" stroke-linejoin="round"/></svg>
+        <span>HemoWawa</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navPrincipal">
+        <span class="sr-only">Abrir menú</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav id="navPrincipal" class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#problema">El problema</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#demo">Probar la app</a></li>
+          <li><a href="#trazabilidad">Las 30 HU</a></li>
+          <li><a class="btn btn-primary btn-sm" href="#unete">Crear cuenta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Salud digital infantil · Lima, Perú</p>
+          <h1>Que ninguna dosis de hierro se olvide</h1>
+          <p class="lead">HemoWawa acompaña el esquema de suplementación de niños de <strong>6 a 35 meses</strong>: recordatorios, registro en un toque y seguimiento compartido entre la familia y el centro de salud.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#demo">Probar la app ahora</a>
+            <a class="btn btn-ghost" href="#problema">Ver por qué importa</a>
+          </div>
+          <ul class="role-legend" aria-label="Quién usa HemoWawa">
+            <li><span class="dot dot-padres" aria-hidden="true"></span>Madres y padres</li>
+            <li><span class="dot dot-cuidadores" aria-hidden="true"></span>Cuidadores secundarios</li>
+            <li><span class="dot dot-salud" aria-hidden="true"></span>Personal de salud</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="phone" role="img" aria-label="Pantalla de ejemplo de la app: Mateo, 14 meses, dosis de hoy pendiente y botón Registrar dosis">
+            <div class="phone-bar"><span>9:41</span><span class="chip chip-padres">Madre/Padre</span></div>
+            <div class="phone-body">
+              <div class="phone-card phone-child"><strong>Mateo · 14 meses</strong><span>Dosis de hoy · 08:00 a. m.</span></div>
+              <div class="phone-week">
+                <span class="d done">L</span><span class="d done">M</span><span class="d done">M</span><span class="d miss">J</span><span class="d done">V</span><span class="d today">S</span><span class="d">D</span>
+              </div>
+              <div class="phone-btn">Registrar dosis</div>
+              <div class="phone-btn phone-btn-out">No se pudo dar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problema" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">El problema</p>
+          <h2>La anemia infantil sigue siendo un problema de salud en el Perú</h2>
+          <p>El tratamiento existe y es gratuito en los establecimientos de salud. La dificultad está en sostenerlo todos los días en casa.</p>
+        </header>
+        <div class="stats">
+          <article class="stat">
+            <p class="stat-num">34,9&nbsp;%</p>
+            <h3>de niños de 6 a 35 meses tuvo anemia en 2025</h3>
+            <p class="meta">INEI, Encuesta Demográfica y de Salud Familiar (ENDES) 2025.</p>
+          </article>
+          <article class="stat">
+            <p class="stat-num">38,7&nbsp;%</p>
+            <h3>consumió suplemento de hierro en los 7 días previos a la encuesta</h3>
+            <p class="meta">Era 33,8&nbsp;% en 2024. ENDES 2025.</p>
+          </article>
+          <article class="stat">
+            <p class="stat-num">43,2&nbsp;%</p>
+            <h3>de anemia en el área rural, frente a 31,5&nbsp;% en el área urbana</h3>
+            <p class="meta">Niños de 6 a 35 meses. ENDES 2025.</p>
+          </article>
+        </div>
+        <p class="sources">Fuentes:
+          <a href="https://www.gob.pe/institucion/inei/noticias/1392685-el-34-9-de-la-poblacion-de-6-a-35-meses-de-edad-sufrio-de-anemia-en-el-2025" target="_blank" rel="noopener">INEI, nota de prensa (34,9&nbsp;%)</a>
+          ·
+          <a href="https://ahora.com.pe/sociedad/anemia-infantil-peru-inei-endes-2025-alimentos-hierro" target="_blank" rel="noopener">Ahora, 2026 (cifras por área y consumo de hierro, citando al INEI)</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Cómo funciona</p>
+          <h2>Del control CRED a la rutina diaria, en tres pasos</h2>
+        </header>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n" aria-hidden="true">1</span>
+            <h3>Registra la indicación</h3>
+            <p>Anota el suplemento, la dosis y la duración que te dieron en el control, para no depender de la memoria.</p>
+          </li>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">2</span>
+            <h3>Cumple día a día</h3>
+            <p>Recibe el recordatorio, registra la dosis con un toque y consulta orientación si hay molestias.</p>
+          </li>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">3</span>
+            <h3>Comparte el seguimiento</h3>
+            <p>Invita a otros cuidadores y vincula a tu centro de salud para que vean la adherencia del niño.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="demo" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Prueba la app</p>
+          <h2>Elige tu rol. Cada uno ve algo distinto.</h2>
+          <p>HemoWawa muestra a cada persona solo lo que necesita. Elige un rol y usa las funciones. Los datos son de ejemplo y no se guardan.</p>
+        </header>
+
+        <div class="role-picker" role="tablist" aria-label="Elige tu rol" id="rolePicker">
+          <button class="role-card role-padres" role="tab" id="tab-padres" aria-selected="true" aria-controls="panel-padres" data-role="padres" tabindex="0">
+            <span class="role-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <span class="role-text"><strong>Madre o padre</strong><small>Registra dosis, recordatorios y recetas de tu hijo.</small></span>
+          </button>
+          <button class="role-card role-cuidadores" role="tab" id="tab-cuidadores" aria-selected="false" aria-controls="panel-cuidadores" data-role="cuidadores" tabindex="-1">
+            <span class="role-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M2.5 20v-1a5.5 5.5 0 0 1 5.5-5.5h2a5.5 5.5 0 0 1 5.5 5.5v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="17.5" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M18 14a4.5 4.5 0 0 1 3.5 4.5V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <span class="role-text"><strong>Cuidador secundario</strong><small>Mira las indicaciones y registra la dosis del día.</small></span>
+          </button>
+          <button class="role-card role-salud" role="tab" id="tab-salud" aria-selected="false" aria-controls="panel-salud" data-role="salud" tabindex="-1">
+            <span class="role-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <span class="role-text"><strong>Personal de salud</strong><small>Sigue la adherencia de tus pacientes.</small></span>
+          </button>
+        </div>
+
+        <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+        <div id="panel-padres" class="app role-padres" role="tabpanel" aria-labelledby="tab-padres">
+          <div class="app-top">
+            <span class="chip chip-padres">Madre/Padre</span>
+            <p class="app-note"><strong>Ves:</strong> tus hijos, su tratamiento, recetas y a quién das acceso. <strong>No ves:</strong> el panel de pacientes del personal de salud.</p>
+          </div>
+          <div class="subtabs" role="tablist" aria-label="Secciones para madre o padre" data-sub="padres">
+            <button role="tab" id="st-hoy" aria-selected="true" aria-controls="sp-hoy" tabindex="0">Inicio</button>
+            <button role="tab" id="st-trat" aria-selected="false" aria-controls="sp-trat" tabindex="-1">Dosis</button>
+            <button role="tab" id="st-rec" aria-selected="false" aria-controls="sp-rec" tabindex="-1">Recetas</button>
+            <button role="tab" id="st-ayuda" aria-selected="false" aria-controls="sp-ayuda" tabindex="-1">Ayuda</button>
+            <button role="tab" id="st-cuid" aria-selected="false" aria-controls="sp-cuid" tabindex="-1">Perfil</button>
+          </div>
+
+          <div id="sp-hoy" role="tabpanel" aria-labelledby="st-hoy" class="grid-2">
+            <article class="card">
+              <header class="card-head"><h3>Dosis de hoy</h3><span class="hu">HU-011 · HU-012 · HU-015</span></header>
+              <p class="child-line"><strong id="hoyNino">Mateo</strong> · <span id="hoyEdad">14 meses</span></p>
+              <p class="today-state" id="hoyEstado" role="status" aria-live="polite">Pendiente</p>
+              <div class="btn-row">
+                <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar dosis</button>
+                <button type="button" class="btn btn-outline" id="btnNoDada" aria-expanded="false" aria-controls="noDadaBox">No se administró hoy</button>
+              </div>
+              <div id="noDadaBox" class="subbox" hidden>
+                <label for="motivoNoDada">¿Por qué no se administró?</label>
+                <select id="motivoNoDada">
+                  <option value="">Elige un motivo</option>
+                  <option value="olvido">Se me olvidó</option>
+                  <option value="rechazo">El niño lo rechazó</option>
+                  <option value="molestia">Tuvo una molestia</option>
+                </select>
+                <p class="field-error" id="errNoDada" role="alert" hidden>Elige un motivo para continuar.</p>
+                <button type="button" class="btn btn-secondary btn-sm" id="btnGuardarNoDada">Guardar motivo</button>
+              </div>
+              <div id="orientacion" class="callout" role="status" aria-live="polite" hidden></div>
+            </article>
+
+            <article class="card">
+              <header class="card-head"><h3>Recordatorio diario</h3><span class="hu">HU-008 · HU-009 · HU-010</span></header>
+              <label for="horaRec">Hora del recordatorio</label>
+              <input type="time" id="horaRec" value="08:00">
+              <p class="meta" id="recEstado" role="status" aria-live="polite">Recordatorio diario a las 08:00.</p>
+              <div class="btn-row">
+                <button type="button" class="btn btn-secondary btn-sm" id="btnProbarRec">Ver cómo llega el aviso</button>
+              </div>
+              <div id="avisoRec" class="notice" role="alert" hidden>
+                <p><strong>Es hora de la dosis de <span id="avisoNino">Mateo</span></strong></p>
+                <label for="snoozeSel">Posponer</label>
+                <select id="snoozeSel">
+                  <option value="15">15 minutos</option>
+                  <option value="30" selected>30 minutos</option>
+                  <option value="60">1 hora</option>
+                </select>
+                <div class="btn-row">
+                  <button type="button" class="btn btn-primary btn-sm" id="avisoRegistrar">Registrar ahora</button>
+                  <button type="button" class="btn btn-outline btn-sm" id="avisoPosponer">Posponer</button>
+                  <button type="button" class="btn btn-outline btn-sm" id="btnSegundoAviso">Simular que no registro</button>
+                </div>
+              </div>
+              <p id="segundoAviso" class="callout callout-warn" role="alert" hidden></p>
+            </article>
+
+            <article class="card">
+              <header class="card-head"><h3>Actividad de hoy</h3><span class="hu">HU-036</span></header>
+              <ul class="log" id="actividad"><li class="empty">Aún no hay actividad hoy.</li></ul>
+            </article>
+
+            <article class="card">
+              <header class="card-head"><h3>Mi avance</h3><span class="hu">HU-014</span></header>
+              <p class="kpi"><span id="kpiPct">0 %</span><small id="kpiTxt">de cumplimiento</small></p>
+              <p class="meta" id="kpiDet" role="status" aria-live="polite"></p>
+              <ol class="week" id="semana" aria-label="Cumplimiento de la semana"></ol>
+              <p class="meta legend">✓ administrada · ✕ no administrada · • hoy pendiente</p>
+            </article>
+
+            <article class="card card-wide">
+              <header class="card-head"><h3>Historial y calendario</h3><span class="hu">HU-013 · HU-016</span></header>
+              <div class="cal-bar">
+                <button type="button" class="btn btn-outline btn-sm" id="btnMesPrev" aria-label="Mes anterior">‹</button>
+                <h4 id="calTitulo" aria-live="polite"></h4>
+                <button type="button" class="btn btn-outline btn-sm" id="btnMesNext" aria-label="Mes siguiente">›</button>
+              </div>
+              <div class="cal" id="calGrid" role="group" aria-labelledby="calTitulo"></div>
+              <p class="meta legend">Verde: administrada · Rojo: no administrada · Gris: sin registro. Pulsa un día para ver el detalle.</p>
+              <p id="calDetalle" class="callout" role="status" aria-live="polite" hidden></p>
+              <div class="resumen-ctl">
+                <div><label for="periodoRes">Periodo del resumen</label>
+                  <select id="periodoRes"><option value="7">Últimos 7 días</option><option value="30" selected>Últimos 30 días</option></select></div>
+                <button type="button" class="btn btn-secondary btn-sm" id="btnResumen">Resumen para el control</button>
+              </div>
+              <div id="resumenBox" class="subbox" hidden>
+                <pre id="resumenTxt" tabindex="0"></pre>
+                <button type="button" class="btn btn-outline btn-sm" id="btnCopiar">Copiar resumen</button>
+              </div>
+            </article>
+          </div>
+
+          <div id="sp-trat" role="tabpanel" aria-labelledby="st-trat" class="grid-2" hidden>
+            <article class="card">
+              <header class="card-head"><h3>Perfil del niño</h3><span class="hu">HU-002</span></header>
+              <form id="formNino" novalidate>
+                <label for="ninoNombre">Nombre</label>
+                <input type="text" id="ninoNombre" autocomplete="off" placeholder="Ej. Lucía">
+                <label for="ninoNac">Fecha de nacimiento</label>
+                <input type="date" id="ninoNac">
+                <label for="ninoPeso">Peso (kg)</label>
+                <input type="number" id="ninoPeso" step="0.1" min="2" max="25" placeholder="Ej. 9,5">
+                <p class="field-error" id="errNino" role="alert" hidden></p>
+                <button type="submit" class="btn btn-primary">Guardar niño</button>
+              </form>
+              <p class="callout" id="okNino" role="status" aria-live="polite" hidden></p>
+              <label for="selNino" class="mt">Niño activo</label>
+              <select id="selNino"></select>
+            </article>
+
+            <article class="card">
+              <header class="card-head"><h3>Indicación de hierro</h3><span class="hu">HU-004 · HU-005</span></header>
+              <div class="indic" aria-live="polite">
+                <p><span>Suplemento</span><strong id="indSup"></strong></p>
+                <p><span>Dosis</span><strong id="indDosis"></strong></p>
+                <p><span>Frecuencia</span><strong id="indFrec"></strong></p>
+                <p><span>Duración</span><strong id="indDur"></strong></p>
+                <p><span>Instrucciones</span><strong id="indNotas"></strong></p>
+                <p><span>Actualizada</span><strong id="indAct"></strong></p>
+              </div>
+              <form id="formIndic" novalidate>
+                <label for="inSup">Suplemento</label>
+                <select id="inSup">
+                  <option>Sulfato ferroso (gotas)</option>
+                  <option>Hierro polimaltosado</option>
+                  <option>Micronutrientes (sobres)</option>
+                </select>
+                <label for="inDosis">Dosis indicada en el control</label>
+                <input type="text" id="inDosis" autocomplete="off" placeholder="Como figura en tu receta">
+                <label for="inFrec">Frecuencia</label>
+                <input type="text" id="inFrec" autocomplete="off" placeholder="Como figura en tu receta">
+                <label for="inDur">Duración</label>
+                <input type="text" id="inDur" autocomplete="off" placeholder="Ej. 3 meses">
+                <label for="inNotas">Instrucciones adicionales (opcional)</label>
+                <textarea id="inNotas" rows="2"></textarea>
+                <p class="field-error" id="errIndic" role="alert" hidden>Completa dosis, frecuencia y duración.</p>
+                <button type="submit" class="btn btn-primary">Guardar indicación</button>
+              </form>
+              <p class="meta">Escribe exactamente lo que te indicó el personal de salud.</p>
+            </article>
+          </div>
+
+          <div id="sp-rec" role="tabpanel" aria-labelledby="st-rec" hidden>
+            <article class="card card-wide">
+              <header class="card-head"><h3>Recetas con alimentos ricos en hierro</h3><span class="hu">HU-024 · HU-025 · HU-026</span></header>
+              <div class="filters">
+                <div><label for="fEdad">Edad del niño</label>
+                  <select id="fEdad"><option value="todas">Todas</option><option value="6-8">6 a 8 meses</option><option value="9-11">9 a 11 meses</option><option value="12-35">12 a 35 meses</option></select></div>
+                <div><label for="fIng">Ingrediente</label>
+                  <select id="fIng"><option value="todos">Todos</option><option value="lentejas">Lentejas</option><option value="higado">Hígado de pollo</option><option value="sangrecita">Sangrecita</option></select></div>
+              </div>
+              <p class="meta" id="recCount" role="status" aria-live="polite"></p>
+              <div class="recipes" id="recetas"></div>
+              <div id="recDetalle" class="detail" tabindex="-1" hidden></div>
+              <p class="meta">Recetas e ilustraciones de ejemplo del prototipo. Consulta las porciones con tu centro de salud.</p>
+            </article>
+          </div>
+
+          <div id="sp-ayuda" role="tabpanel" aria-labelledby="st-ayuda" class="grid-2" hidden>
+            <article class="card">
+              <header class="card-head"><h3>Reportar una molestia</h3><span class="hu">HU-018 · HU-019 · HU-020</span></header>
+              <form id="formMolestia" novalidate>
+                <fieldset>
+                  <legend>¿Qué observaste?</legend>
+                  <label class="opt"><input type="radio" name="molestia" value="heces"> Heces más oscuras</label>
+                  <label class="opt"><input type="radio" name="molestia" value="estre"> Estreñimiento</label>
+                  <label class="opt"><input type="radio" name="molestia" value="sabor"> Rechaza el sabor</label>
+                  <label class="opt"><input type="radio" name="molestia" value="alarma"> Algo me preocupa mucho</label>
+                </fieldset>
+                <p class="field-error" id="errMolestia" role="alert" hidden>Elige una opción.</p>
+                <button type="submit" class="btn btn-primary">Guardar y ver orientación</button>
+              </form>
+              <div id="molestiaOut" class="callout" role="status" aria-live="polite" hidden></div>
+              <h4 class="mt">Molestias registradas</h4>
+              <ul class="log" id="molestiasLog"><li class="empty">Aún no registraste molestias.</li></ul>
+            </article>
+
+            <article class="card">
+              <header class="card-head"><h3>Cómo mezclar el suplemento</h3><span class="hu">HU-021</span></header>
+              <p class="meta" id="tecEdad"></p>
+              <div id="tecnicas"></div>
+              <p class="meta">Orientación referencial del prototipo, pendiente de validar con personal de salud. No reemplaza la indicación del personal de salud.</p>
+            </article>
+          </div>
+
+          <div id="sp-cuid" role="tabpanel" aria-labelledby="st-cuid" class="grid-2" hidden>
+            <article class="card">
+              <header class="card-head"><h3>Invitar a un cuidador</h3><span class="hu">HU-031</span></header>
+              <p>Genera un código para que un familiar pueda ver las indicaciones y registrar la dosis.</p>
+              <button type="button" class="btn btn-primary" id="btnInvitar">Generar código</button>
+              <p class="code" id="codInvit" hidden></p>
+              <p class="today-state" id="invEstado" role="status" aria-live="polite" hidden>Pendiente</p>
+              <div class="btn-row" id="invAcc" hidden>
+                <button type="button" class="btn btn-secondary btn-sm" id="btnInvAceptar">Simular que el cuidador acepta</button>
+                <button type="button" class="btn btn-outline btn-sm" id="btnInvCancelar">Cancelar invitación</button>
+              </div>
+            </article>
+            <article class="card">
+              <header class="card-head"><h3>Compartir con el centro de salud</h3><span class="hu">HU-041</span></header>
+              <p>El personal de salud solo verá a tu hijo si le das este código.</p>
+              <button type="button" class="btn btn-primary" id="btnCodSalud">Generar código</button>
+              <p class="code" id="codSalud" hidden></p>
+              <p class="meta" id="codSaludEst" role="status" aria-live="polite"></p>
+            </article>
+          </div>
+        </div>
+
+        <div id="panel-cuidadores" class="app role-cuidadores" role="tabpanel" aria-labelledby="tab-cuidadores" hidden>
+          <div class="app-top">
+            <span class="chip chip-cuidadores">Cuidador</span>
+            <p class="app-note"><strong>Ves:</strong> las indicaciones del niño y el estado de hoy (solo lectura). <strong>No puedes:</strong> cambiar la indicación ni dar acceso a otras personas.</p>
+          </div>
+          <div class="grid-2">
+            <article class="card">
+              <header class="card-head"><h3>Hoy · <span id="cNino">Mateo</span></h3><span class="hu">HU-033 · HU-035</span></header>
+              <div class="indic">
+                <p><span>Suplemento</span><strong id="cSup"></strong></p>
+                <p><span>Dosis</span><strong id="cDosis"></strong></p>
+                <p><span>Frecuencia</span><strong id="cFrec"></strong></p>
+                <p><span>Duración</span><strong id="cDur"></strong></p>
+                <p><span>Instrucciones</span><strong id="cNotas"></strong></p>
+              </div>
+              <p class="today-state" id="cEstado" role="status" aria-live="polite">Pendiente</p>
+              <p class="meta" id="cAviso"></p>
+            </article>
+
+            <article class="card">
+              <header class="card-head"><h3>Registrar dosis</h3><span class="hu">HU-034</span></header>
+              <form id="formCuid" novalidate>
+                <label for="cNombreCuid">Tu nombre</label>
+                <input type="text" id="cNombreCuid" value="Abuela" autocomplete="off">
+                <fieldset>
+                  <legend>¿Cómo se dio?</legend>
+                  <label class="opt"><input type="radio" name="dosisTipo" value="completa" checked> Dosis completa</label>
+                  <label class="opt"><input type="radio" name="dosisTipo" value="parcial"> Dosis parcial</label>
+                </fieldset>
+                <label for="cObs">Observación (opcional)</label>
+                <textarea id="cObs" rows="2"></textarea>
+                <p class="field-error" id="errCuid" role="alert" hidden>Escribe tu nombre.</p>
+                <button type="submit" class="btn btn-primary" id="cRegistrar">Registrar dosis</button>
+              </form>
+            </article>
+
+            <article class="card">
+              <header class="card-head"><h3>Reportar incidencia</h3><span class="hu">HU-037</span></header>
+              <form id="formInc" novalidate>
+                <fieldset>
+                  <legend>¿Qué pasó?</legend>
+                  <label class="opt"><input type="radio" name="inc" value="Rechazó la dosis"> Rechazó la dosis</label>
+                  <label class="opt"><input type="radio" name="inc" value="Vomitó"> Vomitó</label>
+                  <label class="opt"><input type="radio" name="inc" value="Se olvidó la dosis"> Se olvidó la dosis</label>
+                </fieldset>
+                <label for="incNota">Comentario (opcional)</label>
+                <textarea id="incNota" rows="2"></textarea>
+                <p class="field-error" id="errInc" role="alert" hidden>Elige qué pasó.</p>
+                <button type="submit" class="btn btn-primary">Enviar a los padres</button>
+              </form>
+            </article>
+
+            <article class="card">
+              <header class="card-head"><h3>Lo que reciben los padres</h3><span class="hu">HU-036</span></header>
+              <p class="meta">Cada registro avisa a los padres de forma automática y queda en su actividad.</p>
+              <ul class="log" id="avisosPadres"><li class="empty">Aún no hay avisos.</li></ul>
+            </article>
+          </div>
+        </div>
+
+        <div id="panel-salud" class="app role-salud" role="tabpanel" aria-labelledby="tab-salud" hidden>
+          <div class="app-top">
+            <span class="chip chip-salud">Personal de salud</span>
+            <p class="app-note"><strong>Ves:</strong> solo a los pacientes que la familia vinculó con su código. <strong>No ves:</strong> recetas ni invitaciones de cuidadores.</p>
+          </div>
+          <div class="grid-2">
+            <article class="card">
+              <header class="card-head"><h3>Vincular paciente</h3><span class="hu">HU-041</span></header>
+              <form id="formVinc" novalidate>
+                <label for="vincCod">Código que comparte la familia</label>
+                <input type="text" id="vincCod" autocomplete="off" placeholder="HEMO-0000">
+                <p class="field-error" id="errVinc" role="alert" hidden></p>
+                <button type="submit" class="btn btn-primary">Vincular</button>
+              </form>
+              <p class="meta">¿Sin código? Genéralo en Madre/Padre › Perfil, o usa el de práctica: <strong>HEMO-4821</strong>.</p>
+              <div id="vincBox" class="callout" role="status" aria-live="polite" hidden>
+                <span id="vincTxt"></span>
+                <button type="button" class="btn btn-outline btn-sm" id="btnRetirar">Retirar acceso</button>
+              </div>
+            </article>
+            <article class="card">
+              <header class="card-head"><h3>Alertas de posible abandono</h3><span class="hu">HU-044</span></header>
+              <label for="umbral">Alertar desde (días sin registro)</label>
+              <input type="number" id="umbral" min="1" max="14" value="3">
+              <div role="status" aria-live="polite"><ul class="log" id="alertas"></ul></div>
+            </article>
+            <article class="card card-wide">
+              <header class="card-head"><h3>Panel de adherencia</h3><span class="hu">HU-042 · HU-043</span></header>
+              <div class="filters">
+                <div><label for="busca">Buscar paciente</label><input type="search" id="busca" placeholder="Nombre"></div>
+                <div><label for="estado">Estado</label>
+                  <select id="estado"><option value="todos">Todos</option><option value="riesgo">En riesgo</option><option value="ok">Al día</option></select></div>
+                <div><label for="orden">Ordenar por</label>
+                  <select id="orden"><option value="nombre">Nombre</option><option value="adh">Menor adherencia</option><option value="sin">Más días sin registro</option></select></div>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <caption class="sr-only">Pacientes vinculados y su adherencia</caption>
+                  <thead><tr><th scope="col">Paciente</th><th scope="col">Edad</th><th scope="col">Adherencia 14 días</th><th scope="col">Sin registro</th><th scope="col">Estado</th><th scope="col"><span class="sr-only">Detalle</span></th></tr></thead>
+                  <tbody id="pacientes"></tbody>
+                </table>
+              </div>
+              <p class="meta" id="pacCount" role="status" aria-live="polite"></p>
+              <div id="pacDetalle" class="detail" tabindex="-1" hidden></div>
+              <p class="meta">Pacientes de ejemplo.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trazabilidad" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Trazabilidad</p>
+          <h2>Las 30 historias de usuario que ya funcionan en esta página</h2>
+          <p>Cada historia de usuario (HU) está en la demo. Pulsa una para ir a donde se usa.</p>
+        </header>
+        <div class="table-wrap">
+          <table class="trace">
+            <caption class="sr-only">Historias de usuario implementadas, rol y dónde se usan</caption>
+            <thead><tr><th scope="col">HU</th><th scope="col">Historia</th><th scope="col">Rol</th><th scope="col">UNS</th><th scope="col">N°</th><th scope="col">Dónde</th></tr></thead>
+            <tbody id="trazaBody"></tbody>
+          </table>
+        </div>
+        <p class="meta" id="trazaCount"></p>
+      </div>
+    </section>
+
+    <section id="unete" class="section section-alt">
+      <div class="container cta-grid">
+        <div>
+          <p class="eyebrow">Empieza hoy</p>
+          <h2>Crea tu cuenta</h2>
+          <p>Con tu cuenta guardas el esquema de hierro de tu hijo y recibes los recordatorios. Esta es una demostración: los datos no se envían.</p>
+        </div>
+        <form class="card" id="formCuenta" novalidate>
+          <header class="card-head"><h3>Registro de cuenta</h3><span class="hu">HU-001</span></header>
+          <label for="cNombre">Nombre completo</label>
+          <input type="text" id="cNombre" autocomplete="name">
+          <label for="cCorreo">Correo electrónico</label>
+          <input type="email" id="cCorreo" autocomplete="email" placeholder="nombre@correo.com">
+          <label for="cCel">Celular</label>
+          <input type="tel" id="cCel" autocomplete="tel" placeholder="999 999 999">
+          <label for="cPass">Contraseña (mínimo 8 caracteres)</label>
+          <input type="password" id="cPass" autocomplete="new-password">
+          <p class="field-error" id="errCuenta" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary btn-block">Crear cuenta</button>
+          <p class="ok" id="okCuenta" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="brand-foot">HemoWawa</p>
+        <p>Proyecto académico de la Universidad Peruana de Ciencias Aplicadas (UPC). Curso HCI for UX Design (1ASI0784), ciclo 2026-20, Grupo 4.</p>
+      </div>
+      <div>
+        <p class="foot-title">Equipo</p>
+        <ul>
+          <li>Barboza Becerra, Yancarlos Edu</li>
+          <li>Eslava Arce, Ronald Santiago</li>
+          <li>Matienzo Torres, Sophie Dayanna</li>
+          <li>Montenegro Espino, Anderson Jhunior</li>
+          <li>Poma Poma, John Anthony</li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-title">Aviso</p>
+        <p>HemoWawa no reemplaza la consulta médica. Ante cualquier duda, acude a tu establecimiento de salud.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
